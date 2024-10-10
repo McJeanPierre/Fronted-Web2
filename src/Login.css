@@ -1,0 +1,67 @@
+.contenedor-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.formulario-login {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.titulo-login {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.campo-formulario {
+  margin-bottom: 1rem;
+}
+
+.etiqueta-campo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.etiqueta-campo svg {
+  margin-right: 0.5rem;
+}
+
+.entrada-campo {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.mensaje-error {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.boton-enviar {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-enviar:hover {
+  background-color: #003d82;
+}
