@@ -39,8 +39,15 @@ export default function Registro() {
   const manejarEnvio = (e) => {
     e.preventDefault();
     if (validarFormulario()) {
-      console.log('Formulario enviado', { nombre, correo, contrasena });
-      // Aquí iría la lógica para enviar los datos al servidor
+      const datos = {
+        nombre,
+        correo,
+        contrasena,
+      };
+
+      // Guardar los datos en localStorage
+      localStorage.setItem('usuarioRegistrado', JSON.stringify(datos));
+      alert('Registro exitoso. Ahora puedes iniciar sesión.');
     }
   };
 

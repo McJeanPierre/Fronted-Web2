@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import HomePage from './HomePage';
 import Login from './Login';
 import Registro from './Registro';
+import PanelCliente from './PanelCliente';
+
 
 export default function App() {
   return (
@@ -14,6 +16,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
+          <Route path="/panel-cliente" element={<PanelCliente />} />
           {/* Aquí puedes agregar más rutas según sea necesario */}
         </Routes>
       </div>
