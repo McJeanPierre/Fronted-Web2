@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Mail, Lock } from 'lucide-react';
+import { AuthContext } from './AuthContext'; // Importa el contexto
 import './Login.css';
 
 export default function Login() {
   const [correo, setCorreo] = useState('');
   const [contrasena, setContrasena] = useState('');
   const [errores, setErrores] = useState({});
+  const { login } = useContext(AuthContext); // Usa el método login del contexto
   const navigate = useNavigate();
 
   const validarFormulario = () => {
@@ -38,11 +40,8 @@ export default function Login() {
           usuarioRegistrado.correo === correo &&
           usuarioRegistrado.contrasena === contrasena
         ) {
-          if (correo === 'admin@hotmail.com') {
-            navigate('/admin-panel');
-          } else {
-            navigate('/panel-cliente');
-          }
+          login(usuarioRegistrado); // Llama al método login del contexto
+          navigate('/panel-cliente');
         } else {
           alert('Correo o contraseña incorrectos');
         }
